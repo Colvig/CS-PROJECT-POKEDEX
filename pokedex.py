@@ -46,11 +46,14 @@ def main():
     pokemon_image = Label(window)
     pokemon_image.pack(side='left', padx=20)
 
+
     ndex = Label(window)
     ndex.pack(side=BOTTOM, pady=10)
 
+
     poke_type = Label(window)
     poke_type.pack(side=BOTTOM, pady=10)
+
 
     poke_hp = Label(window)
     poke_hp.pack(side=BOTTOM, pady=10)
@@ -59,18 +62,21 @@ def main():
     poke_atk = Label(window)
     poke_atk.pack(side=BOTTOM, pady=10)
 
+
     poke_def = Label(window)
     poke_def.pack(side=BOTTOM, pady=10)
+
 
     poke_sp_atk = Label(window)
     poke_sp_atk.pack(side=BOTTOM, pady=10)
 
+
     poke_sp_def = Label(window)
     poke_sp_def.pack(side=BOTTOM, pady=10)
     
+
     poke_speed = Label(window)
     poke_speed.pack(side=BOTTOM, pady=10)
-
 
     # selecting a line in the file
     pokemonlst = []  # create a list of pokemon 
