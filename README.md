@@ -1,4 +1,4 @@
-# Pokedex for Python 3.9.7
+# Gen 1 Pokedex for Python 3.9.7
 
 This project requires two files. There is a ```pokedex.py``` and a ```pokestats.txt```. These both need to be downloaded into the same folder. 
 
