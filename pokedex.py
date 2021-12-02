@@ -4,7 +4,10 @@
 
 from tkinter import *
 from PIL import Image ,ImageTk
+import os
 import pdb
+
+IMAGEROOT = 'images'
 
 
 def main():
@@ -14,7 +17,7 @@ def main():
     window.geometry('900x900')
     window.configure(bg='#f25f5f')
     window.resizable(False, False)
-    img = ImageTk.PhotoImage(Image.open('pokedex.png'))
+    img = ImageTk.PhotoImage(Image.open(os.path.join(IMAGEROOT, 'pokedex.png')))
     banner = Label(window, image=img)
     banner.image = img
     banner.pack()
@@ -119,7 +122,7 @@ def filescanner(pokemon_image, poke_input):
         if pokemon[0].lower() == user_input.lower():
             # creating an empty label field which will display the pokemons image
             png = pokemon[1] + user_input.lower().capitalize() + ".png"
-            img = ImageTk.PhotoImage(Image.open(png).resize((100, 100)))
+            img = ImageTk.PhotoImage(Image.open(os.path.join(IMAGEROOT, png)).resize((100, 100)))
             print(png)
             pokemon_image.config(image=img)
             pokemon_image.image = img
