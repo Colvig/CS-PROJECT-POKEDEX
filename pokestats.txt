@@ -130,7 +130,7 @@ Magikarp 129 Water 20 10 55 15 20 80
 Gyarados 130 Water 95 125 79 60 100 81
 Lapras 131 Water 130 85 80 85 95 60
 Ditto 132 Normal 48 48 48 48 48 48
-Eevee133 Normal 55 55 50 45 65 55
+Eevee 133 Normal 55 55 50 45 65 55
 Vaporeon 134 Water 130 65 60 110 95 65
 Jolteon 135 Eletric 65 65 60 110 95 130
 Flareon 136 Fire 65 130 60 95 110 65
