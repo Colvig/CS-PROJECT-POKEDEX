@@ -92,7 +92,7 @@ def main():
             if pokemon[0].lower() == user_input.lower():
                 # creating an empty label field which will display the pokemons image
                 png = pokemon[1] + user_input.lower().capitalize() + ".png"
-                img = ImageTk.PhotoImage(Image.open(png))
+                img = ImageTk.PhotoImage(Image.open(png).resize((100, 100)))
                 print(png)
                 pokemon_image.config(image=img)
                 pokemon_image.image = img
