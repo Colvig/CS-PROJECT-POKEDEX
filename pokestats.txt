@@ -119,7 +119,7 @@ Goldeen 118 Water 45 67 60 35 50 63
 Seaking 119 Water 80 92 65 65 80 68
 Staryu 120 Water 30 45 55 70 55 85
 Starmie 121 Water 60 75 85 100 85 115 
-Mr'Mime 122 Psychic 40 45 65 100 120 90
+MrMime 122 Psychic 40 45 65 100 120 90
 Scyther 123 Bug 70 110 80 55 80 105
 Jynx 124 Ice 65 50 35 115 95 95
 Electabuzz 125 Eletric 65 83 57 95 85 105

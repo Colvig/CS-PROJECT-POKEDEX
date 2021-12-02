@@ -18,6 +18,8 @@ def main():
     window.configure(bg='#f25f5f')
     window.resizable(False, False)
     img = ImageTk.PhotoImage(Image.open(os.path.join(IMAGEROOT, 'pokedex.png')))
+
+    # adding a banner to the pokedex for title
     banner = Label(window, image=img)
     banner.image = img
     banner.pack()
@@ -25,12 +27,12 @@ def main():
     # opening and reading a file
     infile = open('pokestats.txt', 'r')
 
-    # create a label
+    # creating a label
     my_label = Label(window, text="Search for a Generation 1 Pokemon",
     font=("Simsun", 14), fg="black")
     my_label.pack(pady=20)
 
-    # create an entry box
+    # creating an entry box
     poke_input = Entry(window, font =('Simsun', 20))
     poke_input.pack(pady=20)               
     
@@ -38,43 +40,43 @@ def main():
     button = Button(window, bd='4', text='Search', fg='black', bg='white', command=lambda: filescanner(pokemon_image, poke_input, ndex, poke_type, poke_hp, poke_atk, poke_def, poke_sp_atk, poke_sp_def, poke_speed))
     button.pack()
 
-    # create a list box
+    # creating a list box
     my_list = Listbox(window, width=30)
     my_list.pack(pady=60)
 
-    # create an image
+    # create a label for an image
     pokemon_image = Label(window)
     pokemon_image.pack(side='left', padx=20)
 
-
+    # creating a label for the pokemons pokedex number
     ndex = Label(window)
     ndex.pack(side=BOTTOM, pady=10)
 
-
+    # creating a label for the pokemons type
     poke_type = Label(window)
     poke_type.pack(side=BOTTOM, pady=10)
 
-
+    # creating a label for the pokemons HP
     poke_hp = Label(window)
     poke_hp.pack(side=BOTTOM, pady=10)
 
-
+    # creating a label for the pokemons attack
     poke_atk = Label(window)
     poke_atk.pack(side=BOTTOM, pady=10)
 
-
+    # creating a label for the pokemons defense 
     poke_def = Label(window)
     poke_def.pack(side=BOTTOM, pady=10)
 
-
+    # creating a label for the pokemons special attack
     poke_sp_atk = Label(window)
     poke_sp_atk.pack(side=BOTTOM, pady=10)
 
-
+    # creating a label for the pokemons special defense 
     poke_sp_def = Label(window)
     poke_sp_def.pack(side=BOTTOM, pady=10)
     
-
+    # creating a label for the pokemons speed
     poke_speed = Label(window)
     poke_speed.pack(side=BOTTOM, pady=10)
 
@@ -132,7 +134,9 @@ def check(evt, poke_input, pokemonlst, my_list):
     # update listbox with selected items
     update(data, my_list)
 
-
+# file scanner is a function that takes a pokemon name from the user input
+# if the user input matches a pokemon it then pulls the information from the txt file
+# it updates the image and the stats to match the desired pokemon
 def filescanner(pokemon_image, poke_input, ndex, poke_type, poke_hp, poke_atk, poke_def, poke_sp_atk, poke_sp_def, poke_speed):
     '''Function that runs when the button is pressed.'''
     # Open the file in the function
