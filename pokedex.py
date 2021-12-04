@@ -103,19 +103,13 @@ def main():
 
     # adding music
     mixer.init()
-
     filename = 'laketheme.mp3'
     mixer.music.load(filename)
     mixer.music.play(loops=-1)
 
-    while True:
-        msg = input("Press <ENTER> to exit >> ")
-        if msg == '':
-            break
 
     # run the main loop
     window.mainloop()
-
 
 def update(data, my_list):
     '''Function to update the listbox.'''
