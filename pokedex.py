@@ -30,57 +30,57 @@ def main():
 
     # creating a label
     my_label = Label(window, text="Search for a Generation 1 Pokemon",
-    font=("Simsun", 20), fg="black")
+    font=("Times New Roman", 20), fg="black", bg='#f25f5f')
     my_label.pack(pady=20)
 
     # creating an entry box
-    poke_input = Entry(window, font =('Simsun', 20))
+    poke_input = Entry(window, font =('Times New Roman', 20))
     poke_input.pack(pady=20)               
     
     # creating the search button and adding a binding functon
-    button = Button(window, bd='4', text='Search', fg='black', bg='white', font=("Simsun", 14),
+    button = Button(window, bd='4', text='Search', fg='black', bg='white', font=("Times New Roman", 14),
     command=lambda: filescanner(pokemon_image, poke_input, ndex, poke_type, poke_hp, 
     poke_atk, poke_def, poke_sp_atk, poke_sp_def, poke_speed))
     button.pack()
 
     # creating a list box
-    my_list = Listbox(window, width=30, height=5)
+    my_list = Listbox(window, width=30, height=5, )
     my_list.pack(pady=30, padx=30)
 
     # create a label for an image
-    pokemon_image = Label(window)
+    pokemon_image = Label(window, bg='#f25f5f')
     pokemon_image.pack(side='left', padx=50)
     
       # creating a label for the pokemons speed
-    poke_speed = Label(window)
+    poke_speed = Label(window, bg='#f25f5f')
     poke_speed.pack(side=BOTTOM, pady=5)
 
     # creating a label for the pokemons special defense 
-    poke_sp_def = Label(window)
+    poke_sp_def = Label(window,bg='#f25f5f')
     poke_sp_def.pack(side=BOTTOM, pady=5)
 
     # creating a label for the pokemons special attack
-    poke_sp_atk = Label(window)
+    poke_sp_atk = Label(window,bg='#f25f5f')
     poke_sp_atk.pack(side=BOTTOM, pady=5)
 
     # creating a label for the pokemons defense 
-    poke_def = Label(window)
+    poke_def = Label(window,bg='#f25f5f')
     poke_def.pack(side=BOTTOM, pady=5)
 
     # creating a label for the pokemons attack
-    poke_atk = Label(window)
+    poke_atk = Label(window, bg='#f25f5f')
     poke_atk.pack(side=BOTTOM, pady=5)
 
     # creating a label for the pokemons HP
-    poke_hp = Label(window)
+    poke_hp = Label(window, bg='#f25f5f')
     poke_hp.pack(side=BOTTOM, pady=5)
 
     # creating a label for the pokemons type
-    poke_type = Label(window)
+    poke_type = Label(window, bg='#f25f5f')
     poke_type.pack(side=BOTTOM, pady=5)
 
     # creating a label for the pokemons pokedex number
-    ndex = Label(window)
+    ndex = Label(window, bg='#f25f5f')
     ndex.pack(side=BOTTOM, pady=5)
 
 
@@ -106,7 +106,6 @@ def main():
     filename = 'laketheme.mp3'
     mixer.music.load(filename)
     mixer.music.play(loops=-1)
-
 
     # run the main loop
     window.mainloop()
@@ -185,15 +184,13 @@ poke_atk, poke_def, poke_sp_atk, poke_sp_def, poke_speed):
             poke_speed.config(text="Speed: " + pokemon[8])
 
             # changing the font of the stats displayed
-            ndex.config(font=("Simsun", 10))
-            poke_type.config(font=("Simsun", 10))
-            poke_hp.config(font=("Simsun", 10))
-            poke_atk.config(font=("Simsun", 10))
-            poke_def.config(font=("Simsun", 10))
-            poke_sp_atk.config(font=("Simsun", 10))
-            poke_sp_def.config(font=("Simsun", 10))
-            poke_speed.config(font=("Simsun", 10))
-
-
+            ndex.config(font=("Times New Roman", 10))
+            poke_type.config(font=("Times New Roman", 10))
+            poke_hp.config(font=("Times New Roman", 10))
+            poke_atk.config(font=("Times New Roman", 10))
+            poke_def.config(font=("Times New Roman", 10))
+            poke_sp_atk.config(font=("Times New Roman", 10))
+            poke_sp_def.config(font=("Times New Roman", 10))
+            poke_speed.config(font=("Times New Roman", 10))
 if __name__ == "__main__":
     main()
