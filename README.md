@@ -6,7 +6,7 @@ Open this folder in VSCode making sure you see the text file and the python file
 
 Tkinter is needed. To install Tkinter through VSCode navigate to the terminal and type ```pip install tk```.
 
-This project also requires PIL. In the same terminal as before type ```pip install pillow```.
+This project also requires PIL and pygame. In the same terminal as before type ```pip install pillow``` for PIL, and ```pip install pygame``` for pygame.
 
 Once both of these are installed you should be able to press run and the podedex will open.
 
