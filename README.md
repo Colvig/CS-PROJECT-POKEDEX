@@ -6,7 +6,9 @@ Open this folder in VSCode making sure you see the text file and the python file
 
 Tkinter is needed. To install Tkinter through VSCode navigate to the terminal and type ```pip install tk```.
 
-This project also requires PIL and pygame. In the same terminal as before type ```pip install pillow``` for PIL, and ```pip install pygame```
+This project also requires PIL and pygame. In the same terminal as before type ```pip install pillow``` for PIL,
+
+and ```pip install pygame```
 
 for pygame.
 
