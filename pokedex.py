@@ -103,9 +103,16 @@ def main():
 
     # adding music
     mixer.init()
-    filename = 'laketheme.mp3'
-    mixer.music.load(filename)
-    mixer.music.play(loops=-1)
+
+    # creating 2 music channels
+    mixer.set_num_channels(2)
+    
+    # setting channel 0 to play the lake them
+    # channel 1 will be used for a sound effect
+    mixer.Channel(0).play(mixer.Sound('laketheme.mp3'), loops = -1)
+
+    # setting the volume of the background music to 40%
+    mixer.Channel(0).set_volume(.4)
 
     # run the main loop
     window.mainloop()
@@ -151,10 +158,14 @@ def check(evt, poke_input, pokemonlst, my_list):
 def filescanner(pokemon_image, poke_input, ndex, poke_type, poke_hp, 
 poke_atk, poke_def, poke_sp_atk, poke_sp_def, poke_speed):
     '''Function that runs when the button is pressed.'''
-    # Open the file in the function
+
+    # plays the select sound effect when search is pressed
+    mixer.Channel(1).play(mixer.Sound('selecteffect.mp3'))
+    
+    # open the file in the function
     file = open('pokestats.txt', 'r')
 
-    # Take the user input from the field
+    # take the user input from the field
     user_input = poke_input.get()
     
     # Loop over the file
