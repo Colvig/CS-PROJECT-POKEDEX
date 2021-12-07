@@ -1,5 +1,5 @@
 # This program mimics a pokedex. 
-# Search for a gen 1 pokemon and see what they look like along with their stats.
+# Search for a gen 1 or 2 pokemon and see what they look like along with their base stats.
 # This program will take statistics from a file and convert them into a pokedex.
 
 from tkinter import *
@@ -29,7 +29,7 @@ def main():
     infile = open('pokestats.txt', 'r')
 
     # creating a label
-    my_label = Label(window, text="Search for a Generation 1 Pokemon",
+    my_label = Label(window, text="Search for a Generation 1 or 2 Pokemon",
     font=("Times New Roman", 20), fg="black", bg='#f25f5f')
     my_label.pack(pady=20)
 
@@ -171,10 +171,10 @@ poke_atk, poke_def, poke_sp_atk, poke_sp_def, poke_speed):
 
             # creating an empty label field which will display the pokemons image
             png = pokemon[1] + user_input.lower().capitalize() + ".png"
-            img = ImageTk.PhotoImage(Image.open(os.path.join(IMAGEROOT, png)).resize((210, 210)))
+            img = ImageTk.PhotoImage(Image.open(os.path.join(IMAGEROOT, png)).resize((200, 200)))
             pokemon_image.config(image=img)
             pokemon_image.image = img
-            ndex.config(text="Pokedex # " + pokemon[1])
+            ndex.config(text="Pokedex #: " + pokemon[1])
             poke_type.config(text="Primary Type: " + pokemon[2])
             poke_hp.config(text="HP: " + pokemon[3])
             poke_atk.config(text="Attack: " + pokemon[4])
