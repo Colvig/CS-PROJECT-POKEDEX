@@ -14,12 +14,12 @@ for pygame.
 
 Once both of these are installed you should be able to press run and the podedex will open.
 
-![Pokedex](https://i.gyazo.com/4a235509e45eb1c2f04e2c3fc606c64e.png)
+![Pokedex](https://i.gyazo.com/f29830cf64b650a406086f63ace47a98.png)
 
 Once you see this you can continue with the steps here
 
-![Steps](https://i.gyazo.com/dd13d156e9f896ff10afd861fa1bf58e.png)
+![Steps](https://i.gyazo.com/8820cbeb6b07ee01c0da95c6d2e60ae2.png)
 
 And here's the final result, with a special appearance from my favorite Pokemon!
 
-![I love him](https://i.gyazo.com/af85047ac5e304093525d279c3751636.png)
+![I love him](https://i.gyazo.com/6f7d87b280374cf9c0a18e3279852d8a.png)
