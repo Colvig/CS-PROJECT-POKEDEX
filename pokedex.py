@@ -10,7 +10,6 @@ import pdb
 
 IMAGEROOT = 'images'
 
-
 def main():
     # creating a GUI
     window = Tk()
@@ -21,7 +20,7 @@ def main():
     img = ImageTk.PhotoImage(Image.open(os.path.join(IMAGEROOT, 'pokedex.png')))
 
     # adding a banner to the pokedex for title
-    banner = Label(window, image=img)
+    banner = Label(window, image=img, bg='#f25f5f', padx = 20)
     banner.image = img
     banner.pack()
     
@@ -30,7 +29,7 @@ def main():
 
     # creating a label
     my_label = Label(window, text="Search for a Generation 1 or 2 Pokemon",
-    font=("Times New Roman", 20), fg="black", bg='#f25f5f')
+    font=("Times New Roman", 18), fg="black", bg='#f25f5f')
     my_label.pack(pady=20)
 
     # creating an entry box
@@ -117,8 +116,8 @@ def main():
     # run the main loop
     window.mainloop()
 
+#Function to update the listbox
 def update(data, my_list):
-    '''Function to update the listbox.'''
     # clear the list box
     my_list.delete(0, END)
 
@@ -126,18 +125,16 @@ def update(data, my_list):
     for item in data:
         my_list.insert(END, item)
 
-
+#Function to update the entry box with listbox clicked
 def fillout(evt, poke_input, my_list):
-    '''Function to update the entry box with listbox clicked.'''
     # delete whatever is in the entry box
     poke_input.delete(0, END)
 
     # add clicked list item to entry box
     poke_input.insert(0, my_list.get(ACTIVE))
 
-
+#Function to check entry vs listbox
 def check(evt, poke_input, pokemonlst, my_list):
-    '''Function to check entry vs listbox.'''
     # grab what was typed
     typed = poke_input.get()
 
@@ -154,10 +151,10 @@ def check(evt, poke_input, pokemonlst, my_list):
 
 # file scanner is a function that takes a pokemon name from the user input
 # if the user input matches a pokemon it then pulls the information from the txt file
-# it updates the image and the stats to match the desired pokemon
+# it updates the image and the stats to match the desired pokemon.
+# Function that runs when the button is pressed
 def filescanner(pokemon_image, poke_input, ndex, poke_type, poke_hp, 
 poke_atk, poke_def, poke_sp_atk, poke_sp_def, poke_speed):
-    '''Function that runs when the button is pressed.'''
 
     # plays the select sound effect when search is pressed
     mixer.Channel(1).play(mixer.Sound('selecteffect.mp3'))
