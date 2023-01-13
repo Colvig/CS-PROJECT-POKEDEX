@@ -1,4 +1,4 @@
-# Gen 1 Pokedex for Python 3.9.7
+# Gen 1 & 2 Pokedex for Python 3.9.7
 
 This project requires four files. There is a ```pokedex.py``` and a ```pokestats.txt``` along with two mp3 files ```laketheme.mp3``` and ```selecteffect.mp3```. These all need to be downloaded into the same folder in order for this to run. 
 
